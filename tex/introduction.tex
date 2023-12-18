@@ -1,0 +1,26 @@
+\section{Introduction}
+
+Attention to generative models have peaked as the performance of text and image models are continuing to improve. 
+However, generative video models are much more complicated to implement. 
+The reason for this is because of the high complexity of high-definition videos and the large computation power needed to run these generative video models.
+
+There have been several previous works on video generation models that include using GANs, VAEs, autoregressive models, and diffusion models.
+Among these GAN models have shown promise when generating high-quality images.
+However, GAN models suffer from mode collapse and instable training, which makes it difficult to apply GAN models to the more complex video generation problem \cite{brock2018large, karras2019style}.
+Other previous works have attempted to use diffusion models to generate high-definition videos \cite{ho2022imagen}.
+However, these diffusion models require substantial computational power to generate high-quality videos.
+Therefore, latent diffusion models were proposed to solve the high computational cost of generating videos \cite{he2022latent, blattmann2023align}.
+Nonetheless, these models can be further improved to produce higher quality and more natural-looking videos.
+
+We propose OLVDM, an object-centric latent video diffusion model that aligns objects during video generation to create natural-looking videos. We modify the original LVDM model and add an object-tracking component to the model. 
+When the individual frames are passed through the encoder to the latent space, we use Slot Attention to extract slots from each individual frame. 
+Then, we find the correlation between the slots of each frame in the video. 
+We add a new component to the loss function that will try and minimize the difference in correlation between each frame. 
+Using this method, our model generates more stable videos that surpass previous works in terms of video quality.
+
+We summarize our main contributions as follows:
+\begin{itemize}
+    \item We propose OLVDM, an object-centric latent video diffusion model that aligns objects during video generation to create natural-looking videos.
+    \item OLVDM uses Slot Attention in the latent space to extract object features from each video frame.
+    \item A new loss term minimizes the difference in slots between each frame to genereate videos with object-aligned frames.
+\end{itemize}

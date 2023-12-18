@@ -1,0 +1,19 @@
+\section{Related work}
+
+\vspace{2mm}
+\noindent\textbf{Video Generation Models.}
+Video generation has been a prominent area of research with various approaches aiming to capture the complexity and diversity of dynamic scenes. Specifically, latent diffusion models are showing promise in the field of video generation due to the models ability to map the video to a lower-dimensional latent space for efficiency. 
+Variational Autoencoders have been extensively explored for video generation tasks \cite{he2018probabilistic}. These models leverage probabilistic latent spaces to capture the underlying structure of the data distribution. However, VAEs often face challenges in generating high-fidelity and temporally coherent videos, limiting their effectiveness in capturing complex dynamics.
+Generative Adversarial Networks have shown remarkable success in image generation tasks, leading to their application in video generation \cite{tian2021good}. However, training GANs for video synthesis poses inherent difficulties, including mode collapse and the generation of temporally inconsistent frames.
+
+\vspace{2mm}
+\noindent\textbf{Latent Diffusion  Models.}
+He~\etal~proposed LVDM, a text-to-video model that processes videos in the latent space to accomplish video generation. 
+LVDM uses a 3D autoencoder to map the video frames to a low-dimensional 3D latent space, significantly performing better than previous pixel-space video diffusion models.
+They also introduce condition latent perturbation and uncoditional guidance to improve performance when generating longer videos.
+However, the results from LVDM suffer from flickering and also cannot focus on the subject of the video effectively.
+Blattman~\etal~\cite{blattmann2023align} also proposed a similar latent diffusion model that reshaped the frames of a video to temporally align each individual frame. 
+They also use several techniques such as frame interpolation and up-sampling to generate high-definition, high-frame rate videos. 
+However, these methods still suffer from mis-alignment between the object and background of the video. 
+
+Previous methods do not sufficiently capture the main subject of a video. In this work, we add a Slot Attention module to extract object-centric representations from each video frame. Then, we add a new loss term to minimize the difference in slots of each frame to generate object-centric videos.

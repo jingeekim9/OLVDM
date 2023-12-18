@@ -1,0 +1,65 @@
+\documentclass[10pt,twocolumn,letterpaper]{article}
+
+\usepackage{cvpr}
+\usepackage{times}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% Include other packages here, before hyperref.
+
+% If you comment hyperref and then uncomment it, you should delete
+% egpaper.aux before re-running latex.  (Or just hit 'q' on the first latex
+% run, let it finish, and you should be clear).
+\usepackage[breaklinks=true,bookmarks=false]{hyperref}
+
+\cvprfinalcopy % *** Uncomment this line for the final submission
+
+\def\cvprPaperID{****} % *** Enter the CVPR Paper ID here
+\def\httilde{\mbox{\tt\raisebox{-.5ex}{\symbol{126}}}}
+
+% Pages are numbered in submission mode, and unnumbered in camera-ready
+%\ifcvprfinal\pagestyle{empty}\fi
+\setcounter{page}{1}
+\begin{document}
+
+%%%%%%%%% TITLE
+\title{Object-Centric Latent Video Diffusion Model for High-Quality Video Generation}
+
+\author{Sangyoon Bae\\
+Seoul National University\\
+{\tt\small stellasybae@snu.ac.kr}
+% Uncomment the following lines to add second author
+\and
+Chanhee Park\\
+Seoul National University\\
+{\tt\small chan0843@snu.ac.kr}
+\and
+JinGee Kim\\
+Seoul National University\\
+{\tt\small jingeekim9@snu.ac.kr}
+}
+
+\maketitle
+%\thispagestyle{empty}
+
+%%%%%%%%% ABSTRACT
+\begin{abstract}
+   This assignment is intended to practice your technical paper writing skills. You are about to write three pages of technical paper, excluding extra space for the references. This is a space for the abstract. The abstract is intended to introduce a brief idea of your work and some summary of the experimental results. Now you can guess what texts should be placed in this section: describe a summary of your work, explain why the project is essential, explain what problem you are solving, describe how did you implement, and how it is distinguishable compared to the baseline approaches. The abstract should be concise, so try to make it to be 10 to 15 lines.
+\end{abstract}
+
+%%%%%%%%% BODY TEXT
+\input{tex/introduction.tex}
+\input{tex/related_work.tex}
+\input{tex/proposed_method.tex}
+\input{tex/results.tex}
+\input{tex/conclusion.tex}
+\input{tex/latex_tips.tex}
+
+{\small
+\bibliographystyle{ieee_fullname}
+\bibliography{egbib}
+}
+
+\end{document}

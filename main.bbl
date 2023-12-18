@@ -1,0 +1,38 @@
+\begin{thebibliography}{1}\itemsep=-1pt
+
+\bibitem{blattmann2023align}
+Andreas Blattmann, Robin Rombach, Huan Ling, Tim Dockhorn, Seung~Wook Kim, Sanja Fidler, and Karsten Kreis.
+\newblock Align your latents: High-resolution video synthesis with latent diffusion models.
+\newblock In {\em Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}, pages 22563--22575, 2023.
+
+\bibitem{brock2018large}
+Andrew Brock, Jeff Donahue, and Karen Simonyan.
+\newblock Large scale gan training for high fidelity natural image synthesis.
+\newblock {\em arXiv preprint arXiv:1809.11096}, 2018.
+
+\bibitem{he2018probabilistic}
+Jiawei He, Andreas Lehrmann, Joseph Marino, Greg Mori, and Leonid Sigal.
+\newblock Probabilistic video generation using holistic attribute control.
+\newblock In {\em Proceedings of the European Conference on Computer Vision (ECCV)}, pages 452--467, 2018.
+
+\bibitem{he2022latent}
+Yingqing He, Tianyu Yang, Yong Zhang, Ying Shan, and Qifeng Chen.
+\newblock Latent video diffusion models for high-fidelity video generation with arbitrary lengths.
+\newblock {\em arXiv preprint arXiv:2211.13221}, 2022.
+
+\bibitem{ho2022imagen}
+Jonathan Ho, William Chan, Chitwan Saharia, Jay Whang, Ruiqi Gao, Alexey Gritsenko, Diederik~P Kingma, Ben Poole, Mohammad Norouzi, David~J Fleet, et~al.
+\newblock Imagen video: High definition video generation with diffusion models.
+\newblock {\em arXiv preprint arXiv:2210.02303}, 2022.
+
+\bibitem{karras2019style}
+Tero Karras, Samuli Laine, and Timo Aila.
+\newblock A style-based generator architecture for generative adversarial networks.
+\newblock In {\em Proceedings of the IEEE/CVF conference on computer vision and pattern recognition}, pages 4401--4410, 2019.
+
+\bibitem{tian2021good}
+Yu Tian, Jian Ren, Menglei Chai, Kyle Olszewski, Xi Peng, Dimitris~N Metaxas, and Sergey Tulyakov.
+\newblock A good image generator is what you need for high-resolution video synthesis.
+\newblock {\em arXiv preprint arXiv:2104.15069}, 2021.
+
+\end{thebibliography}

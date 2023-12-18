@@ -1,0 +1,19 @@
+\section{Proposed Method}
+
+We propose a novel video generation method that uses SLOT attention in the latent space to create object-aligned videos. 
+We use a similar architecture as LVDM to handle video data in the latent space. 
+LVDM uses a lightweight 3D autoencoder that compresses video samples to a lower-dimensional latent space. Then, we use SLOT attention to extract slots from each of the video frames. 
+Each slot for each frame holds feature information about each object in the frame. 
+Then, the frames go through the diffusion and denoising process to regenerate the original video. 
+During the process of generation, we propose a novel correlation loss that minimizes the different between slots for each frame.
+
+\subsection{Video Encoder}
+We first describe a lightweight 3D autoencoder used for video compression. 
+The input video frames (\(x_0\)) have dimensions \(H \times W \times L \times 3\), where \(H\) is the height, \(W\) is the width, \(L\) is the length (number of frames in the video), and 3 represents the RGB color channels.
+The latent representation (\(z_0\)) has dimensions \(h \times w \times l \times c\), where \(h\), \(w\), and \(l\) are spatial dimensions downscaled by factors \(f_s\) (spatial downsampling) and \(f_t\) (temporal downsampling), and \(c\) is the number of channels in the latent space. 
+The encoder is responsible for encoding the input video frames (\(x_0\)) into a latent representation (\(z_0\)). The encoder consists of several layers of 3D convolutions, implying that it operates in three dimensions (height, width, and time). 
+The decoder reconstructs the video frames (\(\widetilde{x}_0\)) from the encoded latent representation (\(z_0\)). 
+Like the encoder, the decoder also comprises several layers of 3D convolutions.
+
+\subsection{Slot Attention}
+The described model maintains \(K\) slots, each represented as a vector denoted as \(S_t = [s_{1t}, \ldots, s_{Kt}] \in \mathbb{R}^{K \times D}\), where \(K\) is the number of slots, and \(D\) is the dimensionality of each slot vector.
